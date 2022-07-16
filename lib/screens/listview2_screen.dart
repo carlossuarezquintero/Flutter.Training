@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_components/theme/app_theme.dart';
 
 class Listview2Screen extends StatelessWidget {
   final options = const [
@@ -15,8 +16,6 @@ class Listview2Screen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text('Listview Tipo 2'),
-          elevation: 15,
-          backgroundColor: Colors.deepPurple,
         ),
         body: ListView.separated(
           itemCount: options.length,
@@ -24,7 +23,7 @@ class Listview2Screen extends StatelessWidget {
             title: Text(options[index]),
             trailing: const Icon(
               Icons.arrow_forward_ios_outlined,
-              color: Colors.deepPurple,
+              color: AppTheme.primary,
             ),
             onTap: () {
               final game = options[index];
